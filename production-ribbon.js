@@ -1,5 +1,9 @@
 (() => {
-  if (window.location.origin !== "https://taskly.iy0306.com") return;
+  const productionOrigins = new Set([
+    "https://taskly.iy0306.com",
+    "https://nnct-corp-guidance-2026.taskly.iy0306.com",
+  ]);
+  if (!productionOrigins.has(window.location.origin)) return;
 
   const id = "taskly-production-ribbon";
   if (document.getElementById(id)) return;
