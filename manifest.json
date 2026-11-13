@@ -1,11 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Taskly 本番環境リボン",
-  "version": "1.0.0",
-  "description": "taskly.iy0306.com に「本番環境」のリボンを表示します。",
+  "version": "1.1.0",
+  "description": "Taskly と企業ガイダンスの本番画面に「本番環境」のリボンを表示します。",
   "content_scripts": [
     {
-      "matches": ["https://taskly.iy0306.com/*"],
+      "matches": [
+        "https://taskly.iy0306.com/*",
+        "https://nnct-corp-guidance-2026.taskly.iy0306.com/*"
+      ],
       "js": ["production-ribbon.js"],
       "run_at": "document_end"
     }
